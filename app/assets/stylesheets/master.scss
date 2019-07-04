@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -18,11 +19,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: image_url('restaurant.png');
+  background: image_url('restaurant_icons.png');
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
 .navbar {
   background: image_url('dark-honeycomb.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #37DFF4;
+  font-family: 'Pacifico', cursive;
 }
