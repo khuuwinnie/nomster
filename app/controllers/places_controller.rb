@@ -4,6 +4,9 @@ class PlacesController < ApplicationController
     @places = Place.order('created_at desc').paginate(:per_page => 5, :page => params[:page])
   end
 
+  def new
+    @place = Place.new
+  end
 
 
 end
