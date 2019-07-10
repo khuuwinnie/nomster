@@ -71,7 +71,13 @@ source 'https://rails-assets.org' do
 end
 
 gem 'will_paginate', '~> 3.1.0'
+#page numbers
 
 gem 'simple_form'
+#textfield
 
 gem "font-awesome-rails"
+#icons
+
+gem "devise"
+#user authentication
