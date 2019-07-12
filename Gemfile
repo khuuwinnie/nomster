@@ -81,3 +81,9 @@ gem "font-awesome-rails"
 
 gem "devise"
 #user authentication
+
+gem "geocoder"
+#GoogleMaps location API
+
+gem "figaro"
+#for sensitive data like passwords, API keys, etc.
