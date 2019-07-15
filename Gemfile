@@ -87,3 +87,4 @@ gem "geocoder"
 
 gem "figaro"
 #for sensitive data like passwords, API keys, etc.
+
