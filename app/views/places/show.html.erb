@@ -32,7 +32,6 @@
   <div id="map"></div>
 <% end %>
 
-<br />
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -43,8 +42,10 @@
   </div>
 </div>
 
+<br />
+<br />
 
-<!-- Modal -->
+<!-- Modal for Comments -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -52,7 +53,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
+        <h4 class="modal-title" id="myModalLabel">Add a Comment</h4>
       </div>
           <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
             <div class="modal-body">
@@ -61,7 +62,7 @@
             </div>  
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+              <%= f.submit "Add comment", class: 'btn btn-primary' %>
             </div>
           <% end %>
     </div>
@@ -70,7 +71,7 @@
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
+  <!-- Button trigger modal for comments -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
   Add a comment
   </button>
@@ -78,18 +79,23 @@
 
 <div class="clear"></div>
 
-
 <div class="row">
-  <% @place.photos.each do |photo| %>
+  <% @place.comments.each do |comment| %>
     <div class="col-12 col-sm-6">
-      <blockquote> 
-        <%= photo.message %>
-        <small><%= photo.user.email %></small>
-        </blockquote>
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
     </div>
   <% end %>
+</div>
 
-<!-- Modal -->
+
+
+<!-- Modal for Photos -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -98,11 +104,12 @@
           <span aria-hidden="true">×</span>
         </button>
         <h4 class="modal-title" id="myModalLabel">Upload a Photo</h4>
-      </div>
+      </div>x
+        <div class="modal-body">
           <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-            <div class="modal-body">
-              <%= f.input :caption %>
-            </div>  
+          <%= f.input :picture %>
+          <%= f.input :caption %>
+        </div>  
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <%= f.submit "Upload a Photo", class: 'btn btn-primary' %>
@@ -113,15 +120,23 @@
 </div>
 
 <div class="col-10 offset-1">
-  <h1 class="float-left">Photos</h1>
-  <!-- Button trigger modal -->
+  <h1 class="float-left">User Photos</h1>
+  <!-- Button trigger modal for photos -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
   Upload a Photo
   </button>
 </div>
 
-<div class="clear"></div>
-
-
+<div class="row">
+  <div class="col-12 col-sm-6">
+    <% if @place.photos.present? %>
+      <% @place.photos.each do |photo| %>
+      <%= image_tag photo.picture.url %>
+        <br />
+        <br />
+      <%= photo.caption %>
+      <small><%= photo.user.email %></small>
+      <% end %>    
+    <% end %>
+ </div>    
 </div>
-
