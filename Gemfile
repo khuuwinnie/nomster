@@ -90,3 +90,6 @@ gem "figaro"
 
 gem 'carrierwave', '~> 1.0'
 # For uploading photos
+
+gem 'fog-aws'
+#Amazon photo bucket
