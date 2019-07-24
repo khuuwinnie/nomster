@@ -1,5 +1,6 @@
 Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
+  # change to :smtp for sending out actual emails
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
