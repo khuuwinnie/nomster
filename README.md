@@ -16,3 +16,19 @@ See it in action <a href="https://nomster-winnie-khuu.herokuapp.com">here</a>.
 
 ## SCREENSHOTS
 ![alt text](nomster1.png)
+Index page
+
+![alt text](nomster2.png)
+Sign up page
+
+![alt text](nomster3.png)
+Sucessful login notification bar below navigation
+
+![alt text](nomster4.png)
+Place details
+
+![alt text](nomster5.png)
+Add Comment modal
+
+![alt text](nomster6.png)
+Add Photo modal
