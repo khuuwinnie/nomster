@@ -6,6 +6,16 @@ It also has Google Maps API integrated to provide the location of a restaurant w
 
 See it in action <a href="https://nomster-winnie-khuu.herokuapp.com">here</a>.
 
+## TECHNOLOGIES USED
+* HTML
+* CSS
+* Ruby
+* Rails
+* Algorithms
+* Vagrant
+* PuTTY
+* RubyMine
+
 ## SEE IT LOCALLY
 
 1. Download the repository and unzip the files.
