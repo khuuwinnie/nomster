@@ -28,7 +28,7 @@ Sucessful login notification bar below navigation
 Place details
 
 ![alt text](nomster5.png)
-Add Comment modal
+Add a Comment modal
 
 ![alt text](nomster6.png)
-Add Photo modal
+Upload a Photo modal
