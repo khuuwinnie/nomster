@@ -21,8 +21,8 @@ See it in action <a href="https://nomster-winnie-khuu.herokuapp.com">here</a>.
 1. Download the repository and unzip the files.
 2. In your preferred coding environment, navigate to the folder `cd XXXXX/nomster-master`
 3. Run `bundle install` to install the required Ruby gems.
-3. Run `rake db:create db: migrate` to set up the database.
-4. Visit your localhost link (i.e. localhost:3030 or localhost:3000)
+4. Run `rake db:create db: migrate` to set up the database.
+5. Visit your localhost link (i.e. localhost:3030 or localhost:3000)
 
 ## SCREENSHOTS
 ![alt text](nomster1.png)
